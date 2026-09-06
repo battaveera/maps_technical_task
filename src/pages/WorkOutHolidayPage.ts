@@ -1,6 +1,5 @@
 import { expect, type Locator, type Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
-import { UiDriver } from "../support/UiDriver";
 import testData from "../utils/work_out_holiday_data.json";
 
 const pageData = testData.workOutHoliday;
@@ -9,7 +8,6 @@ type HolidayCalculationOption = "option_1" | "option_2" | "option_3" | "option_4
 export class WorkOutHolidayPage extends BasePage {
   public static readonly path = pageData.urlPath;
 
-  private readonly page: Page;
   private readonly caption: Locator;
   private readonly heading: Locator;
   private readonly options: Record<HolidayCalculationOption, Locator>;
@@ -17,9 +15,8 @@ export class WorkOutHolidayPage extends BasePage {
   private readonly startAgainLink: Locator;
 
   public constructor(page: Page) {
-    super(new UiDriver(page));
+    super(page);
 
-    this.page = page;
     this.caption = this.page.getByText(pageData.caption, { exact: true });
     this.heading = this.page.getByRole("heading", {
       level: 1,

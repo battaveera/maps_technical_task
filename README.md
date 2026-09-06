@@ -27,9 +27,8 @@ src/
 	utils/       Shared test data and utilities
 ```
 
-Page objects depend on the `UiDriver` contract in `src/support/UiDriver.ts`,
-so a browser library can be connected later without coupling page behavior to
-a specific automation tool.
+Page objects share common navigation and assertion behavior through
+`src/pages/BasePage.ts` and use Playwright locators directly.
 
 The GOV.UK Holiday Entitlement calculator is implemented in various pages in `src/pages/`
 and covered by test suites

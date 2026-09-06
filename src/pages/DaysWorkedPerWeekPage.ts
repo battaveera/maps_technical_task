@@ -1,12 +1,10 @@
 import { type Page, type Locator } from "@playwright/test";
 import { BasePage } from "./BasePage";
-import { UiDriver } from "../support/UiDriver";
 import testData from "../utils/days_worked_per_week_data.json";
 
 const pageData = testData.daysWorkedPerWeek;
 
 export class DaysWorkedPerWeekPage extends BasePage {
-  private readonly page: Page;
   private readonly caption: Locator;
   private readonly heading: Locator;
   private readonly daysInput: Locator;
@@ -14,9 +12,8 @@ export class DaysWorkedPerWeekPage extends BasePage {
   private readonly startAgainLink: Locator;
 
   public constructor(page: Page) {
-    super(new UiDriver(page));
+    super(page);
 
-    this.page = page;
     this.caption = this.page.getByText(pageData.caption, {
       exact: true
     });

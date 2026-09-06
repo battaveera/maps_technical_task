@@ -1,11 +1,10 @@
-import { expect, type Locator } from "@playwright/test";
-import type { UiDriver } from "../support/UiDriver";
+import { expect, type Locator, type Page } from "@playwright/test";
 
 export abstract class BasePage {
-  protected constructor(protected readonly driver: UiDriver) {}
+  protected constructor(protected readonly page: Page) {}
 
   protected async open(url: string): Promise<void> {
-    await this.driver.navigate(url);
+    await this.page.goto(url);
   }
 
   public async expectElementVisible(element: Locator): Promise<void> {

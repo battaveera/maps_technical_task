@@ -9,12 +9,12 @@ import { endToEndFlow } from "../support/E2EFlowHelper";
 import testData from "../utils/information_based_on_answers_data.json";
 
 const pageData = testData.informationBasedOnAnswers;
- const expectedPages = {
-    employeeWorkHours: EmployeeWorkHoursPage,
-    holidayEntitlementBaseOn: HolidayEntitlementBaseOnPage,
-    workOutHoliday: WorkOutHolidayPage,
-    daysWorkedPerWeek: DaysWorkedPerWeekPage
-  };
+const expectedPages = {
+  employeeWorkHours: EmployeeWorkHoursPage,
+  holidayEntitlementBaseOn: HolidayEntitlementBaseOnPage,
+  workOutHoliday: WorkOutHolidayPage,
+  daysWorkedPerWeek: DaysWorkedPerWeekPage
+};
 
 test.describe("Holiday Entitlement Calculator - End to End", () => {
   test("Calculate holiday entitlement for 5 days working option", async ({
@@ -46,13 +46,19 @@ test.describe("Holiday Entitlement Calculator - End to End", () => {
   test("Validate change links from information page open the respective answer pages", async ({
     page
   }) => {
-    for (const { linkName, expectedPage: expectedPageKey } of pageData.changeLinkCases) {
-      await endToEndFlow(page, "5");
-      const resultsPage = new InformationBasedOnAnswersPage(page);
-      await resultsPage.expectPageElements();
+    await endToEndFlow(page, "5");
+    const resultsPage = new InformationBasedOnAnswersPage(page);
+    await resultsPage.expectPageElements();
+    for (const {
+      linkName,
+      expectedPage: expectedPageKey
+    } of pageData.changeLinkCases) {
       await resultsPage.clickChangeLink(linkName);
-      const ExpectedPage = expectedPages[expectedPageKey as keyof typeof expectedPages];
+      const ExpectedPage =
+        expectedPages[expectedPageKey as keyof typeof expectedPages];
       await new ExpectedPage(page).expectPageElements();
+      await page.goBack();
+      await resultsPage.expectPageElements();
     }
   });
 });

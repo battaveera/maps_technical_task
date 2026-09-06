@@ -1,12 +1,10 @@
 import { type Page, type Locator } from "@playwright/test";
 import { BasePage } from "./BasePage";
-import { UiDriver } from "../support/UiDriver";
 import testData from "../utils/information_based_on_answers_data.json";
 
 const pageData = testData.informationBasedOnAnswers;
 
 export class InformationBasedOnAnswersPage extends BasePage {
-  private readonly page: Page;
   private readonly caption: Locator;
   private readonly heading: Locator;
   private readonly summaryText: Locator;
@@ -16,9 +14,8 @@ export class InformationBasedOnAnswersPage extends BasePage {
   private readonly summaryList: Locator;
 
   public constructor(page: Page) {
-    super(new UiDriver(page));
+    super(page);
 
-    this.page = page;
     this.caption = this.page.locator(
       "span.govuk-caption-xl:has-text('Calculate holiday entitlement:')"
     );
