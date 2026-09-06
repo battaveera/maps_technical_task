@@ -1,0 +1,15 @@
+{
+  "employeeWorkHours": {
+    "urlPath": "/calculate-your-holiday-entitlement/y",
+    "caption": "Calculate holiday entitlement",
+    "heading": "Does the employee work irregular hours or for part of the year?",
+    "hint": "‘Irregular hours’ means the number of hours an employee works in a pay period often or always changes. ‘Part of the year’ means there are periods of at least a week in a leave year where the employee does not need to work and is not paid.",
+    "option_yes": {
+      "option": "Yes"
+    },
+    "option_no": {
+      "option": "No"
+    },
+    "continueButton": "Continue"
+  }
+}

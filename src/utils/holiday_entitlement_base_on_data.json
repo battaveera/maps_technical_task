@@ -1,0 +1,26 @@
+{
+  "holidayEntitlementBaseOn": {
+    "urlPath": "/calculate-your-holiday-entitlement/y/regular",
+    "caption": "Calculate holiday entitlement",
+    "heading": "Is the holiday entitlement based on:",
+    "hint": "Check the employment contract if you're not sure about the holiday entitlement.",
+    "option_1": {
+      "option": "days worked per week"
+    },
+    "option_2": {
+      "option": "hours worked per week"
+    },
+    "option_3": {
+      "option": "annualised hours"
+    },
+    "option_4": {
+      "option": "compressed hours"
+    },
+    "option_5": {
+      "option": "shifts"
+    },
+    "continueButton": "Continue",
+    "startAgainLink": "Start again",
+    "changeLink": "Change"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "daysWorkedPerWeek": {
+    "caption": "Calculate holiday entitlement",
+    "heading": "Number of days worked per week?",
+    "continueButton": "Continue",
+    "startAgainLink": "Start again"
+  }
+}

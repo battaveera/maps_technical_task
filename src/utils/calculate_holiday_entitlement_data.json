@@ -1,0 +1,15 @@
+{
+  "calculateHolidayEntitlement": {
+    "urlPath": "/calculate-your-holiday-entitlement",
+    "heading": "Calculate holiday entitlement",
+    "description": {
+      "intro": "Use this tool to calculate holiday entitlement for:",
+      "fullLeaveYear": "a full leave year",
+      "partLeaveYear": "part of a leave year, if the job started or finished part way through the year",
+      "irregularHours": "If an employee works irregular hours or for part of the year, you also use this calculator to work out how much leave they’ve built up (‘accrued’) over a pay period."
+    },
+    "startNowButton": {
+      "name": "Start now"
+    }
+  }
+}

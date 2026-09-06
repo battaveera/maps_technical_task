@@ -1,0 +1,28 @@
+{
+  "informationBasedOnAnswers": {
+    "caption": "Calculate holiday entitlement:",
+    "heading": "Information based on your answers",
+    "summaryText": "The statutory holiday entitlement is 28 days holiday.",
+    "guidanceLink": "Read detailed guidance on how holiday entitlement is calculated",
+    "yourAnswersHeading": "Your answers",
+    "startAgainLink": "Start again",
+    "changeLinkCases": [
+      {
+        "linkName": "Does the employee work irregular hours or for part of the year?",
+        "expectedPage": "employeeWorkHours"
+      },
+      {
+        "linkName": "Is the holiday entitlement based on:",
+        "expectedPage": "holidayEntitlementBaseOn"
+      },
+      {
+        "linkName": "Do you want to work out holiday:",
+        "expectedPage": "workOutHoliday"
+      },
+      {
+        "linkName": "Number of days worked per week?",
+        "expectedPage": "daysWorkedPerWeek"
+      }
+    ]
+  }
+}

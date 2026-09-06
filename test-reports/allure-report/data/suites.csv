@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1315","Validate change links from information page open the respective answer pages","","2026-09-06","passed","2026-09-06","Holiday Entitlement Calculator - End to End","finalTestSuite.spec.ts","",""
+"","1551","Calculate holiday entitlement for 5 days working option","","2026-09-06","passed","2026-09-06","Holiday Entitlement Calculator - End to End","finalTestSuite.spec.ts","",""
+"","8","Calculate holiday entitlement for 3.5 days working option","","2026-09-06","skipped","2026-09-06","Holiday Entitlement Calculator - End to End","finalTestSuite.spec.ts","",""
+"","1441","Validate home page WCAG Level A and AA accessibility","","2026-09-06","passed","2026-09-06","Holiday Entitlement Calculator Home Page - Accessibility Test","accessibilityTest.spec.ts","",""
+"","1371","Validate start again link returns to home page from results","","2026-09-06","passed","2026-09-06","Holiday Entitlement Calculator - End to End","finalTestSuite.spec.ts","",""
+"","1403","Validate home page accessibility","","2026-09-06","failed","2026-09-06","Holiday Entitlement Calculator Home Page - Accessibility Test","accessibilityTest.spec.ts","",""
